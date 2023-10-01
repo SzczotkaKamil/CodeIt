@@ -7,7 +7,8 @@
              x:Class="CodeIt.Views.DetailPage"
              Title=""
              Shell.NavBarIsVisible="False"
-             x:DataType="vm:DetailsViewModel">
+             x:DataType="vm:DetailsViewModel"             
+             BackgroundColor="#212354">
     <ContentPage.Behaviors>
         <toolkit:StatusBarBehavior StatusBarColor="#22205C"
                                    StatusBarStyle="DarkContent"/>
@@ -25,58 +26,69 @@
 
     </ContentPage.Resources>
     <Grid>
-        <ScrollView Padding="15">
+        <ScrollView Padding="15" >
             <VerticalStackLayout Spacing="15">
                 <Image Source="{Binding Course.Image}"
                        HeightRequest="200"
                        WidthRequest="200"
                        HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
-                <Label Text="{Binding Course.Name}"
+                       VerticalOptions="Center">
+                    <Image.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="#3C3F98"/>
+                    </Image.Behaviors>
+                    </Image>
+                <Label Text="{Binding Course.Name,
+                 StringFormat='{0} Course' }"
+                       TextColor="White"
                        FontSize="20"
                        FontAttributes="Bold"
                        HorizontalOptions="Center"/>
                 <Grid ColumnDefinitions="*, *">
                     <Label Grid.Column="0"
-                            Text="{Binding Course.Price, StringFormat='${0:N2}'}"
+                            Text="{Binding Course.Price, StringFormat='{0} PLN'}"
+                            TextColor="White"
                             FontAttributes="Bold"
                             FontSize="18"/>
                     <HorizontalStackLayout Grid.Column="1"
                                     HorizontalOptions="End"
                                     Spacing="2"
                                     VerticalOptions="Center">
-                        <Label Text="4"/>
+                        <Label Text="4"
+                               TextColor="White"/>
                         <Image Source="star"
                                 HeightRequest="15"
                                 WidthRequest="15">
                             <Image.Behaviors>
-                                <toolkit:IconTintColorBehavior TintColor="#132131"/>
+                                <toolkit:IconTintColorBehavior TintColor="#3C3F98"/>
                             </Image.Behaviors>
                         </Image>
                     </HorizontalStackLayout>
                 </Grid>
 
                 <Label Text="Description"
+                       TextColor="White"
                        FontSize="15"
                        FontAttributes="Bold"
                        Margin="0, 10"/>
 
                 <Label FontSize="14"
                        LineHeight="1.5"
-                       Text="asdfa sadfaskdf  ksafk dfks dfksd fksdfk sdfk sdfksdkfsdkf sdfk "/>
+                       Text="{Binding Course.Description}"
+                       TextColor="White"
+                       />
             </VerticalStackLayout>
 
         </ScrollView>
         <Border StrokeThickness="0"
                 x:Name="bottomBox"
-                BackgroundColor="#132131"
+                BackgroundColor="#3C3F98"
                 Margin="-1"
                 VerticalOptions="End"
                 HeightRequest="150"
                 Padding="15"
                 StrokeShape="{OnPlatform Android='RoundRectangle 30, 30, 0, 0', Default='RoundRectangle 0'}">
             <Border.Shadow>
-                <Shadow Brush="#244288"
+                <Shadow Brush="#3C3F98"
                         Radius="100"/>
             </Border.Shadow>
             <Grid RowDefinitions="Auto, Auto"
@@ -85,7 +97,7 @@
                        Grid.Column="0"
                        Text="{Binding Course.Amount, StringFormat='${0:N2}'}"
                        FontSize="20"
-                       TextColor="#545050"
+                       TextColor="White"
                        FontAttributes="Bold"
                        VerticalOptions="Center"/>
                 <Grid Grid.Row="0"
@@ -98,12 +110,12 @@
                                  Style="{StaticResource QuantityBtn}"
                                  Command="{Binding RemoveFromCartCommand}">
                         <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="#244288"/>
+                            <toolkit:IconTintColorBehavior TintColor="#212354"/>
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label Grid.Column="1"
                            Text="{Binding Course.CartQuantity}"
-                           TextColor="#545050"
+                           TextColor="White"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"
                            FontSize="25"/>
@@ -112,7 +124,7 @@
                                  Style="{StaticResource QuantityBtn}"
                                  Command="{Binding AddToCartCommand}">
                         <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="#244288"/>
+                            <toolkit:IconTintColorBehavior TintColor="#212354"/>
                         </ImageButton.Behaviors>
                     </ImageButton>
 
@@ -121,7 +133,8 @@
                 <Button Grid.Row="1"
                         Grid.ColumnSpan="2"
                         Text="View Cart"
-                        BackgroundColor="#244288"
+                        TextColor="White"
+                        BackgroundColor="#212354"
                         HorizontalOptions="Center"
                         CornerRadius="22"
                         Padding="80, 10"
@@ -130,14 +143,14 @@
                         Command="{Binding ViewCartCommand}"/>
             </Grid>
         </Border>
-        <ImageButton Source="{OnPlatform Android='right_arrow', Default='back'}"
+        <ImageButton Source="{OnPlatform Android='arrow', Default='back'}"
                      VerticalOptions="Start"
                      HorizontalOptions="Start"
                      Margin="15"
                      RotationY="{OnPlatform Android=180, Default=0}"
                      Clicked="ImageButton_Clicked">
             <ImageButton.Behaviors>
-                <toolkit:IconTintColorBehavior TintColor="#244288"/>
+                <toolkit:IconTintColorBehavior TintColor="#212354"/>
             </ImageButton.Behaviors>
 
         </ImageButton>
