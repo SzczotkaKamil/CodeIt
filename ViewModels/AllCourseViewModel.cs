@@ -12,26 +12,36 @@ using System.Threading.Tasks;
 
 namespace CodeIt.ViewModels
 {
-    public partial class HomeViewModel : ObservableObject
+    [QueryProperty(nameof(FromSearch), nameof(FromSearch))]
+    public partial class AllCourseViewModel : ObservableObject
     {
         private readonly CourseService _courseService;
-        public HomeViewModel(CourseService courseService)
+        public AllCourseViewModel(CourseService courseService)
         {
             _courseService = courseService;
-            Courses = new(_courseService.GetPopularCourses());
+            Courses = new(_courseService.GetAllCourses());
         }
-
         public ObservableCollection<Course> Courses { get; set; }
 
+        [ObservableProperty]
+        private bool _fromSearch;
+
+        [ObservableProperty]
+        private bool _searching;
+
         [RelayCommand]
-        private async Task GoToAllCoursesPage(bool fromSearch = false)
+        private async Task SearchCourses(string searchTerm)
         {
-            var parameters = new Dictionary<string, object>
+            Courses.Clear();
+            Searching = true;
+            await Task.Delay(1000);
+            foreach (var course in _courseService.SearchCourses(searchTerm))
             {
-                [nameof(AllCourseViewModel.FromSearch)] = fromSearch
-            };
-            await Shell.Current.GoToAsync(nameof(AllCoursesPage), animate: true, parameters);
+                Courses.Add(course);
+            }
+            Searching = false;
         }
+
 
         [RelayCommand]
         private async Task GoToDetailsPage(Course course)
@@ -44,3 +54,4 @@ namespace CodeIt.ViewModels
         }
     }
 }
+
