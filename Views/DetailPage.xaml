@@ -9,7 +9,7 @@
              Shell.NavBarIsVisible="False"
              x:DataType="vm:DetailsViewModel">
     <ContentPage.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="#545050"
+        <toolkit:StatusBarBehavior StatusBarColor="#22205C"
                                    StatusBarStyle="DarkContent"/>
     </ContentPage.Behaviors>
     <ContentPage.Resources>

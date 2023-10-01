@@ -8,6 +8,10 @@
              Title="Code It"
              Padding="15"
              x:DataType="vm:HomeViewModel">
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#22205C"
+                                   StatusBarStyle="DarkContent"/>
+    </ContentPage.Behaviors>
     <ScrollView>
         <VerticalStackLayout Spacing="10">
             <Border StrokeShape="RoundRectangle 10"

@@ -41,11 +41,13 @@
 
                 </Border.GestureRecognizers>
                 <HorizontalStackLayout 
+
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
                     Spacing="10"
                         Padding="0, 5">
                     <Label Text="Get Started" 
+                           TextColor="White"
                            VerticalOptions="Center"
                            FontSize="18"/>
                     <Image Source="rightarrow.svg"

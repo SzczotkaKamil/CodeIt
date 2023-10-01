@@ -3,6 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CodeIt.Views.CheckoutPage"
              Title="CheckoutPage">
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#22205C"
+                                   StatusBarStyle="DarkContent"/>
+    </ContentPage.Behaviors>
     <VerticalStackLayout>
         <Label 
             Text="Welcome to .NET MAUI!"
