@@ -43,7 +43,8 @@
                 <HorizontalStackLayout 
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
-                    Spacing="10">
+                    Spacing="10"
+                        Padding="0, 5">
                     <Label Text="Get Started" 
                            VerticalOptions="Center"
                            FontSize="18"/>
