@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CodeIt.Views.MainPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#212354">
+
+    <Grid RowDefinitions="Auto, *, Auto">
+        <Label Grid.Row="0"
+               Text="Code It"
+               FontSize="50"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="Center"/>
+        <Image Grid.Row="1"
+               Source="codeitlogo.png"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               HeightRequest="250"
+               WidthRequest="250"
+               />
+        <VerticalStackLayout Grid.Row="2"
+                             Spacing="10">
+
+            <Label  Text="Welcome to Code It!"
+                    FontSize="40"
+                    TextColor="White"
+                   
+                    FontAttributes="Bold"/>
+            <Label  Text="This is a simple app that will help you learn how to code."
+                    FontSize="18"
+                    LineHeight="1.2"
+                    TextColor="White"
+                    />
+            <Border StrokeShape="RoundRectangle 25"
+                    StrokeThickness="0"
+                    BackgroundColor="#363982"
+                    HeightRequest="50">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+
+                </Border.GestureRecognizers>
+                <HorizontalStackLayout 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Spacing="10">
+                    <Label Text="Get Started" 
+                           VerticalOptions="Center"
+                           FontSize="18"/>
+                    <Image Source="rightarrow.svg"
+                           VerticalOptions="Center"
+                           HeightRequest="30"/>
+                </HorizontalStackLayout>
+                
+            </Border>
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>
