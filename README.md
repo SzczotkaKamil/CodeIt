@@ -1,10 +1,10 @@
-[About](#about)  
-[Main Page](#main-page)
-[Home Page](#home-page)
-[Detail Page](#detail-page)
-[Checkout Page](#checkout-page)
-[Cart Page](#cart-page)
-[All Courses Page](#all-courses-page)
+[About](#about)  | 
+[Main Page](#main-page)  | 
+[Home Page](#home-page)  | 
+[Detail Page](#detail-page)  | 
+[Checkout Page](#checkout-page)  | 
+[Cart Page](#cart-page)  | 
+[All Courses Page](#all-courses-page)  | 
 [Future Development](#future-development)
 
 <a name="about"/>
