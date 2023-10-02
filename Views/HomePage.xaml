@@ -5,7 +5,7 @@
              xmlns:vm="clr-namespace:CodeIt.ViewModels"
              xmlns:models="clr-namespace:CodeIt.Models"
              x:Class="CodeIt.Views.HomePage"
-             Title="Code It"
+             Title="Code.It"
              Padding="15"
              BackgroundColor="#212354"
              x:DataType="vm:HomeViewModel">

@@ -1,13 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="CodeIt.Views.MainPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="#212354">
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#22205C"
+            StatusBarStyle="DarkContent"/>
+    </ContentPage.Behaviors>
 
     <Grid RowDefinitions="Auto, *, Auto">
         <Label Grid.Row="0"
-               Text="Code It"
+               Text="Code.It"
+               Margin="30, 30"
                FontSize="50"
                FontAttributes="Bold"
                TextColor="White"
@@ -22,17 +28,21 @@
         <VerticalStackLayout Grid.Row="2"
                              Spacing="10">
 
-            <Label  Text="Welcome to Code It!"
-                    FontSize="40"
+            <Label  Text="Welcome to Code.It!"
+                    FontSize="39"
+                    Margin="12,1"
                     TextColor="White"
-                   
                     FontAttributes="Bold"/>
-            <Label  Text="This is a simple app that will help you learn how to code."
+            <Label  Text="Welcome to our store. Here you will find the best software development courses at an affordable price."
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"    
+                    Margin="20, 2"
+                    
                     FontSize="18"
                     LineHeight="1.2"
                     TextColor="White"
                     />
-            <Border StrokeShape="RoundRectangle 25"
+            <Border StrokeShape="RoundRectangle 25" Margin="20, 20"
                     StrokeThickness="0"
                     BackgroundColor="#363982"
                     HeightRequest="50">
@@ -41,10 +51,9 @@
 
                 </Border.GestureRecognizers>
                 <HorizontalStackLayout 
-
                     VerticalOptions="Center"
                     HorizontalOptions="Center"
-                    Spacing="10"
+                    Spacing="10"     
                         Padding="0, 5">
                     <Label Text="Get Started" 
                            TextColor="White"

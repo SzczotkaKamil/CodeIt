@@ -9,7 +9,7 @@
              x:DataType="vm:CartViewModel"
              BackgroundColor="#212354">
     <ContentPage.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="#22205C"
+        <toolkit:StatusBarBehavior StatusBarColor="#212354"
                                    StatusBarStyle="DarkContent"/>
     </ContentPage.Behaviors>
     <ContentPage.ToolbarItems>
@@ -35,12 +35,13 @@
                                      Color="Transparent"/>
                             <Label Text="No items in the cart"
                                    FontSize="25"
-                                   TextColor="Gray"
+                                   TextColor="White"
                                    HorizontalTextAlignment="Center">
                             </Label>
                             <Button Text="Explore all courses"
+                                    TextColor="White"
                                     HorizontalOptions="Center"
-                                    BackgroundColor="#244288"
+                                    BackgroundColor="#3C3F98"
                                     Clicked="Button_Clicked"
                                     />
 
@@ -50,7 +51,7 @@
                         <DataTemplate x:DataType="models:Course">
                             <Border StrokeShape="RoundRectangle 15"
                             StrokeThickness="0"
-                            BackgroundColor="Gray"
+                            BackgroundColor="#3C3F98"
                             Padding="10">
                                 <Grid ColumnDefinitions="25, Auto, 50, *, 80, 25">
                                     <Label Grid.Column="0"
@@ -74,14 +75,14 @@
                                     <VerticalStackLayout Grid.Column="3"
                                                  VerticalOptions="Center"
                                                  Spacing="2">
-                                        <Label Text="{Binding Name}"/>
-                                        <Label Text="{Binding Price, StringFormat='${0:N2}'}"
+                                        <Label Text="{Binding Name, StringFormat='{0} Course'}"/>
+                                        <Label Text="{Binding Price, StringFormat='{0} PLN'}"
                                        FontSize="12"/>
 
                                     </VerticalStackLayout>
 
                                     <Label Grid.Column="4"
-                                   Text="{Binding Amount, StringFormat='${0:N2}'}"
+                                   Text="{Binding Amount, StringFormat='{0} PLN'}"
                                    VerticalOptions="Center"
                                    HorizontalOptions="Center"
                                    FontSize="15"
@@ -113,7 +114,7 @@
 
         </ScrollView>
         <Border StrokeShape="RoundRectangle 40"
-                BackgroundColor="#081E51"
+                BackgroundColor="#22205C"
                 StrokeThickness="0"
                 VerticalOptions="End"
                 Margin="5"
@@ -121,14 +122,14 @@
             <Grid ColumnDefinitions="*, *">
                 <Label Grid.Column="0"
                        Padding="18, 0"
-                       TextColor="Gray"
+                       TextColor="White"
                        VerticalOptions="Center"
                        >
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Total: &#10;"
                                   FontSize="18"/>
-                            <Span Text="{Binding TotalAmount, StringFormat='${0:N2}'}"
+                            <Span Text="{Binding TotalAmount, StringFormat='{0} PLN'}"
                                   FontSize="20"
                                   FontAttributes="Bold"
 />
@@ -140,7 +141,7 @@
 
                 <Button Grid.Column="1"
                         Text="Place Order"
-                        BackgroundColor="#244288"
+                        BackgroundColor="#3C3F98"
                         CornerRadius="22"
                         VerticalOptions="Center"
                         HorizontalOptions="End"

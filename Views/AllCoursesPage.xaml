@@ -93,10 +93,12 @@
                                             <HorizontalStackLayout Spacing="2"
                                                                    Padding="2">
                                                 <Label Text="View more"
-                                                       TextColor="White"
+                                                       TextColor="White"                         
+                                                       Padding="0, 5"
                                                        VerticalOptions="Center"/>
-                                                <Image Source="right_arrow"
-                                                       HeightRequest="30"
+                                                <Image Source="rightarrow"
+                                                       HeightRequest="20"
+                                                       WidthRequest="23"
                                                        VerticalOptions="Center"/>
 
                                             </HorizontalStackLayout>

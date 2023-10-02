@@ -34,7 +34,7 @@
                        HorizontalOptions="Center"
                        VerticalOptions="Center">
                     <Image.Behaviors>
-                        <toolkit:IconTintColorBehavior TintColor="#3C3F98"/>
+                        <toolkit:IconTintColorBehavior TintColor="#A48FDC"/>
                     </Image.Behaviors>
                     </Image>
                 <Label Text="{Binding Course.Name,
@@ -59,7 +59,7 @@
                                 HeightRequest="15"
                                 WidthRequest="15">
                             <Image.Behaviors>
-                                <toolkit:IconTintColorBehavior TintColor="#3C3F98"/>
+                                <toolkit:IconTintColorBehavior TintColor="#A48FDC"/>
                             </Image.Behaviors>
                         </Image>
                     </HorizontalStackLayout>
@@ -110,7 +110,7 @@
                                  Style="{StaticResource QuantityBtn}"
                                  Command="{Binding RemoveFromCartCommand}">
                         <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="#212354"/>
+                            <toolkit:IconTintColorBehavior TintColor="#A48FDC"/>
                         </ImageButton.Behaviors>
                     </ImageButton>
                     <Label Grid.Column="1"
@@ -124,7 +124,7 @@
                                  Style="{StaticResource QuantityBtn}"
                                  Command="{Binding AddToCartCommand}">
                         <ImageButton.Behaviors>
-                            <toolkit:IconTintColorBehavior TintColor="#212354"/>
+                            <toolkit:IconTintColorBehavior TintColor="#A48FDC"/>
                         </ImageButton.Behaviors>
                     </ImageButton>
 
@@ -133,6 +133,7 @@
                 <Button Grid.Row="1"
                         Grid.ColumnSpan="2"
                         Text="View Cart"
+                        FontAttributes="Bold"
                         TextColor="White"
                         BackgroundColor="#212354"
                         HorizontalOptions="Center"
@@ -143,14 +144,15 @@
                         Command="{Binding ViewCartCommand}"/>
             </Grid>
         </Border>
-        <ImageButton Source="{OnPlatform Android='arrow', Default='back'}"
+        <ImageButton Source="{OnPlatform Android='rightarrow', Default='back'}"
                      VerticalOptions="Start"
                      HorizontalOptions="Start"
+                     HeightRequest="30"
                      Margin="15"
                      RotationY="{OnPlatform Android=180, Default=0}"
                      Clicked="ImageButton_Clicked">
             <ImageButton.Behaviors>
-                <toolkit:IconTintColorBehavior TintColor="#212354"/>
+                <toolkit:IconTintColorBehavior TintColor="White"/>
             </ImageButton.Behaviors>
 
         </ImageButton>
