@@ -10,8 +10,8 @@
 <a name="about"/>
 
 # **About** 
-**Code.It**, is simply an online store, where the user can choose for oneself the desired programming course from a list of all the courses available inside the application.
-The application consists of pages such as Main Page, Home Page, Detail Page, Checkout Page, Cart Page and All Courses Page, which are presented as follows:
+**Code.It**, is simply an online store, where the user can choose for him/herself the desired programming course from a list of all courses available inside the application.
+The application consists of pages such as Main Page, Home Page, Detail Page, Checkout Page, Cart Page and All Courses Page, which are presented as following:
 <a name="main-page"/>
 ### Main Page 
 <img src="https://github.com/SzczotkaKamil/CodeIt/assets/56258522/4b74a879-0808-4240-b5ea-b2ba366d96a2"  width="270" height="600"> </img>
