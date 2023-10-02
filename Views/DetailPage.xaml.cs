@@ -1,12 +1,7 @@
 #if IOS
-using CodeIt.ViewModels;
 using UIKit;
 
 #endif
-using CodeIt.Models;
-using Microsoft.Maui.Controls;
-using CodeIt.Services;
-using CodeIt.Models;
 using CodeIt.ViewModels;
 namespace CodeIt.Views;
 

@@ -95,7 +95,7 @@
                   ColumnDefinitions="*, *">
                 <Label Grid.Row="0"
                        Grid.Column="0"
-                       Text="{Binding Course.Amount, StringFormat='${0:N2}'}"
+                       Text="{Binding Course.Amount, StringFormat='{0} PLN'}"
                        FontSize="20"
                        TextColor="White"
                        FontAttributes="Bold"
